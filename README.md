@@ -1,5 +1,5 @@
 # PES_Front
-Front-end del proyecto en grupo para la asignatura PES: Agenda Cultural  <br>
+Front-End del proyecto en grupo para la asignatura PES: Agenda Cultural  <br>
 Miembros del grupo: <br>
 -Sergi Campuzano <br>
 -Adrià Espinoza <br>
