@@ -1,13 +1,21 @@
 import React from 'react'
-import { View, StyleSheet, Image } from 'react-native'
-import StyledText from './StyledText'
+import { View, StyleSheet } from 'react-native'
+import ImageText from './ImageText'
+import { Link } from 'react-router-native'
 
-const Navigator = ({iconUrl, iconText}) => {
+const NavigatorTab = ({active, to, iconUrl, iconText}) => {
+    return (
+        <Link to={to}>
+            <ImageText iconUrl={iconUrl} iconText={iconText}></ImageText>
+        </Link>
+    ) 
+}
+
+const Navigator = ({iconUrl, to, iconText}) => {
 
     return (
         <View style={styles.container}>
-            <Image style={styles.image} source={iconUrl} resizeMode='contain'></Image>
-            <StyledText color='white'>{iconText}</StyledText>
+            <NavigatorTab active to={to} iconUrl={iconUrl} iconText={iconText}></NavigatorTab>
         </View>
     )
 }
@@ -19,10 +27,6 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
 
-    },
-    image: {
-        width: 40,
-        height: 40
     }
 })
 
