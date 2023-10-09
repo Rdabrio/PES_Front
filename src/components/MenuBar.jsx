@@ -8,7 +8,7 @@ const MenuBar = () => {
         <View style={styles.container}>
             <Navigator iconUrl={require('../../assets/SocialIcon.png')} to='/social' iconText='Social'></Navigator>
             <Navigator iconUrl={require('../../assets/MapIcon.png')} to='/map' iconText='Map'></Navigator>
-            <Navigator iconUrl={require('../../assets/HomeIcon.png')} to='/' iconText='Home'></Navigator>
+            <Navigator iconUrl={require('../../assets/HomeIcon.png')} to='/home' iconText='Home'></Navigator>
             <Navigator iconUrl={require('../../assets/HeartIcon.png')} to='/favs' iconText='Favs'></Navigator>
             <Navigator iconUrl={require('../../assets/ProfileIcon.png')} to='/profile' iconText='Profile'></Navigator>
         </View>

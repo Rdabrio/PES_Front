@@ -1,7 +1,6 @@
 import React from 'react'
 import {View, StyleSheet} from 'react-native'
 import { Switch, Route, Routes } from 'react-router-native'
-import Constants from 'expo-constants'
 import StyledText from './StyledText'
 import MenuBar from './MenuBar'
 import SignIn from './SignIn'
@@ -31,7 +30,6 @@ const Main = () => {
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: Constants.statusBarHeight,
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'space-between',
