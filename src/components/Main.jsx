@@ -1,28 +1,28 @@
 import React from 'react'
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native'
+import {View, StyleSheet} from 'react-native'
+import { Switch, Route, Routes } from 'react-router-native'
 import Constants from 'expo-constants'
 import StyledText from './StyledText'
 import MenuBar from './MenuBar'
-import { Switch, Route, Routes } from 'react-router-native'
+import SignIn from './SignIn'
+import Home from './Home'
+import Map from './Map'
+import Profile from './Profile'
+import Favs from './Favs'
+import Social from './Social'
+import Register from './Register'
 
 const Main = () => {
     return (
         <View style={styles.container}>
             <Routes>
-                <Route path='/' element={<StyledText fontSize='subheading' fontWeight='bold'>Home view</StyledText>} exact>
-                </Route>
-                <Route path='/map'  element={<StyledText fontSize='subheading' fontWeight='bold'>Map view</StyledText>} exact>
-                    
-                </Route>
-                <Route path='/profile'  element={<StyledText fontSize='subheading' fontWeight='bold'>Profile view</StyledText>} exact>
-                    
-                </Route>
-                <Route path='/favs'  element={<StyledText fontSize='subheading' fontWeight='bold'>Favs view</StyledText>} exact>
-                    
-                </Route>
-                <Route path='/social'  element={<StyledText fontSize='subheading' fontWeight='bold'>Social view</StyledText>} exact>
-                    
-                </Route>
+                <Route path='/' element={<SignIn />} exact/>
+                <Route path='/register' element={<Register />} exact/>
+                <Route path='/home' element={<Home />} exact/>
+                <Route path='/map'  element={<Map />} exact/>                  
+                <Route path='/profile'  element={<Profile />} exact/>    
+                <Route path='/favs'  element={<Favs />} exact/>   
+                <Route path='/social'  element={<Social />} exact/>
             </Routes>
             <MenuBar></MenuBar>
         </View>
