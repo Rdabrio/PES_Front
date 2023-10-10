@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
         fontSize: theme.fontSizes.body,
         fontFamily: theme.fonts.main,
         fontWeight: theme.fontWeights.normal,
+        
     },
     colorPrimary: {
         color: theme.colors.primary
@@ -18,14 +19,19 @@ const styles = StyleSheet.create({
     white: {
         color: '#ffffff'
     },
+    black: {
+        color: '#000000'
+    },
     bold: {
         fontWeight: theme.fontWeights.bold
     },
     subheading: {
-        fontSize: theme.fontSizes.subheading
+        fontSize: theme.fontSizes.subheading,
+        textAlign: 'center'
     },
     title: {
-        fontSize: theme.fontSizes.title
+        fontSize: theme.fontSizes.title,
+        textAlign: 'center'
     }
 })
 
@@ -35,6 +41,7 @@ export default function StyledText({children, color, fontSize, fontWeight, style
         color === 'primary' && styles.colorPrimary,
         color === 'secondary' && styles.colorSecondary,
         color === 'white' && styles.white,
+        color === 'black' && styles.black,
         fontSize === 'subheading' && styles.subheading,
         fontSize === 'title' && styles.title,
         fontWeight === 'bold' && styles.bold,
