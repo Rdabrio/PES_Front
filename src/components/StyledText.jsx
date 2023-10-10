@@ -23,6 +23,12 @@ const styles = StyleSheet.create({
     },
     subheading: {
         fontSize: theme.fontSizes.subheading
+    },
+    homeTitleText:{
+        color: theme.colors.textPrimary,
+        fontSize: theme.fontSizes.title, 
+        fontFamily: theme.fonts.title, 
+        fontWeight: theme.fontWeights.bold, 
     }
 })
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native'
+import {View, Text, StyleSheet, TouchableOpacity, KeyboardAvoidingView} from 'react-native'
 import Constants from 'expo-constants'
 import StyledText from './StyledText'
 import MenuBar from './MenuBar'
@@ -24,7 +24,10 @@ const Main = () => {
             <Route path='/social' element={<StyledText fontSize='subheading' fontWeight='bold'>Social view</StyledText>} exact>
 
             </Route>
-        </Routes><MenuBar></MenuBar>
+        </Routes>
+       
+        <MenuBar></MenuBar>
+        
         </View>
     )
 }
