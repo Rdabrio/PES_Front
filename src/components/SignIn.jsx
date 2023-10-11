@@ -1,8 +1,7 @@
 import React from 'react'
-import {View, StyleSheet, Text} from 'react-native'
+import {View, StyleSheet, Text, Dimensions} from 'react-native'
 import StyledText from './StyledText'
-import theme from '../theme'
-import Constants from 'expo-constants'
+import { Link } from 'react-router-native'
 import ImageRow from './ImageRow'
 import SignInButton from './SignInButton'
 
@@ -36,6 +35,12 @@ const SignIn = () => {
                 <SignInButton text='Google'></SignInButton>
                 <SignInButton text='Github'></SignInButton>
             </View>
+            <View style={styles.linkContainer}>
+                <StyledText color='white'>Encara no estàs registrat? </StyledText>
+                <Link to='/register'>
+                    <StyledText color= 'white'>Crea el teu compte</StyledText>
+                </Link>
+            </View>
         </View>
     )
 }
@@ -45,7 +50,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
         width: '100%',
         height: '100%',
-        paddingTop: Constants.statusBarHeight,
         alignItems: 'center',
         justifyContent: 'flex-start',
         
@@ -63,13 +67,21 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'space-around',
         marginTop: 40,
+        position: 'absolute',
+        marginTop:  Dimensions.get("window").height * 0.3
     },
     buttonsContainer: {
-        paddingBottom: 60,
+        height: 'auto',
         width: '100%',
         alignItems: 'center',
-        marginTop: 30,
+        marginTop:  Dimensions.get("window").height * 0.5,
+        alignSelf: 'flex-end'
+    },
+    linkContainer: {
+        flexDirection: 'column',
+        
     }
+    
     
 })
 

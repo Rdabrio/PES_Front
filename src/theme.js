@@ -5,7 +5,7 @@ const theme = {
         primary: '#0366d6',
     },
     background: {
-        primary: '#011f4b',
+        primary: '#101a29',
         secondary: '#03396c',
         tertiary: '#005b96',
         quaternary: '#6497b1',
