@@ -8,9 +8,10 @@ const SearchBar = () => {
     const onChangeSearch = query => setSearchQuery(query);
 
     //Para eliminar la aparicion del keyboard TEMPORALMENTE
+    /*
     closeKeyboard = () => {
         Keyboard.dismiss();
-    };
+    };*/
 
     return (
       <Searchbar
@@ -19,7 +20,7 @@ const SearchBar = () => {
         value={searchQuery}
         style={{ backgroundColor: 'lightblue',
         }}
-        onFocus={this.closeKeyboard}
+        //onFocus={this.closeKeyboard}
       />
     );
   };
