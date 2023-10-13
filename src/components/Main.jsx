@@ -23,7 +23,7 @@ const Main = () => {
                 <Route path='/favs'  element={<Favs />} exact/>   
                 <Route path='/social'  element={<Social />} exact/>
             </Routes>
-            <MenuBar></MenuBar>
+                
         </View>
     )
 }
